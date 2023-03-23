@@ -1,9 +1,9 @@
 package com.epam.lecture.ooptask;
 
-public class Animal {
+public abstract class Animal implements Movable, Playable {
 
-    String name;
-    int age;
+    protected String name;
+    protected int age;
 
     public Animal() {
 
@@ -14,13 +14,9 @@ public class Animal {
         this.age = age;
     }
 
-    void sleep() {
-
-    }
-
-    protected void eat() {
-        System.out.println("Animal is eating");
-    }
+    abstract void sleep();
+    abstract void eat();
+    abstract void makeSound();
 
     int getAge() {
         return age;
@@ -28,9 +24,5 @@ public class Animal {
 
     String getName() {
         return name;
-    }
-
-    void makeSound() {
-        System.out.println("Animal is making sound");
     }
 }

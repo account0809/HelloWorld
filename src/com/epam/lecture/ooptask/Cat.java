@@ -6,6 +6,11 @@ public class Cat extends Animal {
         super(name, age);
     }
 
+    @Override
+    void sleep() {
+        System.out.println("Sleep [Cat]");
+    }
+
     void catchMice() {
 
     }
@@ -14,4 +19,23 @@ public class Cat extends Animal {
         System.out.println("Cat is eating");
     }
 
+    @Override
+    void makeSound() {
+        System.out.println("Meeeooow");
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Cat run");
+    }
+
+    @Override
+    public void play() {
+        System.out.println("Catch mice");
+    }
+
+    @Override
+    public void askToPlay() {
+        System.out.println("Cat asks to play");
+    }
 }

@@ -3,9 +3,22 @@ package com.epam.lecture.ooptask;
 public class TaskOne {
 
     public static void main(String[] args) {
-        Cat cat = new Cat("Tom", 5);
-        Dog dog = new Dog("Pike", 7);
+        TaskOne taskOne = new TaskOne();
 
-        cat.eat();
+        Cat cat = new Cat("Tom", 5);
+        Animal dog = new Dog("Pike", 7);
+
+        taskOne.action(cat);
+        taskOne.action(dog);
+    }
+
+    private void action(Animal animal) {
+        animal.move();
+        animal.askToPlay();
+        animal.play();
+    }
+
+    private void sleep(Cat animal) {
+        animal.sleep();
     }
 }
